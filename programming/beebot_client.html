@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.6.0/socket.io.min.js'></script>
+  <script src='https://beebotte.com/bbt.js' ></script>
+  <script>
+    var bbt = new BBT('8e17ef8794a4326c23756af9bec2b9aa');
+    bbt.subscribe({
+      channel: 'ifttt',
+      resource: 'action',
+    }, function(msg){
+      /* Do something here */
+      /* Will get here every time a new resource data is written or published */
+      console.log(msg);
+    });
+  </script>
+</body>
+</html>
