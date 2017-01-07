@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SearchIndexes Version="1.0">
+    <Documents>
+        <Document ID="3">
+            <Title>概要</Title>
+            <Text>概要
+近年、オープンソースハードウェアのArduinoを始めとするプログラマブルなマイコンボードの登場や、インターネット環境の普及やスマートフォンの所持率の向上により、IoT市場は過去にない盛り上がりを見せ、今年に入ってgoogle homeやamazon echoを始めとする多くのIoTデバイスが登場した。しかし、現状の段階では家庭に普及するのは難しいと思われる。その理由は主に次の2点である。1点目は、google homeなどのデバイスで他のデバイスを制御する際には、その制御されるデバイス自体もインターネットに接続される必要があるという点である。例えば、google home 経由で音楽を他のスピーカーで再生したいなら、別途インターネットに接続可能なスピーカーを購入しなければならない。2点目は、wi-fiルーターの接続台数に制限がある点である。一般家庭で用いられる無線LANルーターの接続台数は10台が目安とされ[]、そのためWi-Fi接続方式のIoTデバイスの接続台数が増えるとその分ルーターにも負荷が増え、日常的にPCやスマートフォンを使用するのに支障をきたす恐れがある。
+よって本研究の課題を既存の製品をIoT化すること、Wi-fi接続機器の削減することの２つとし、私は課題解決のアプローチとしてオープンデザインとパーソナルファブリケーションに着目したIoTデバイスを作成することを目的とした。
+結果的に制作したIoTデバイスは親機と子機の2種類で構成され、親機はWifi接続で子機以外のIoTデバイスやインターネットでのやり取りを裁く担当をする。子機と親機間はIEEE802.15.4接続で親機から送られてきた情報を元に子機を稼働させる。今回、私はそのデバイスの例としてIFTTTと接続可能な水蒸気ユニットを作成した。</Text>
+        </Document>
+        <Document ID="12">
+            <Title>1-2 既往研究</Title>
+            <Text>1-2 既往研究
+上記の背景を鑑みて、既往研究として、複数台のIoTデバイスの接続を想定するであろう製品及びプロジェクトを調査した。
+</Text>
+        </Document>
+        <Document ID="21">
+            <Title>構成の概要</Title>
+            <Text>4-1-1 構成の概要
+#
+図1 制作システム
+
+今回制作したシステムは、IFTTTというwebサービスやデバイスを連携させることができるサービスを使って、beebotteというクラウドサービスを経由して、intel Edisonに信号を送り、その信号に応じて近距離無線モジュールとArduinoを使って各水蒸気ユニットを動かすものである。
+</Text>
+        </Document>
+        <Document ID="30">
+            <Title>参考</Title>
+        </Document>
+        <Document ID="13">
+            <Title>1-3 目的</Title>
+            <Text>1-3 目的
+本章2節で取り上げたIoTデバイスでは
++ Wifi接続が多い
++  IoTデバイスのほとんどがWi-Fiで接続される(基本的に単体での使用を考えているため)
++ 規格が統一されていないから
++オープンソースにした方がいい気がする / 
++ 個人のニーズの多様化 → カスタマイズ性オープンデザインとパーソナルファブリケーション
++ IoTデバイスを統括するハブとなすデバイス
++  HueやwemoのLED照明システムなど以外はwi-fi接続
++ 
+
+これらのことを踏まえ、本研究ではIoTデバイスの制作を行う。</Text>
+        </Document>
+        <Document ID="5">
+            <Title>目次</Title>
+            <Text>第1章 序論
+2.
+3.
+4.
+</Text>
+        </Document>
+        <Document ID="22">
+            <Title>構成要素の詳細</Title>
+            <Text>4-1-2 構成要素の詳細
+IFTTT 
+IFTTTとはServices同士を連携することでAppletsを作るwebサービスである。連携する際は、triggerとactionにそれぞれ1つずつServicesを設定する。 
+	•	Service … Twitter, facebook, Dropboxといったwebサービスや、スマートフォン、FitbitやAndroid Wearなどのウェアラブルデバイスなどを指す。trigger用のServicesは177、action用のServicesは143ある。[2]
+	•	Applet … Appletとは片方のServiceが実行された時に、他のServiceが実行される仕組みを一つにまとめたものである。Appletは下の図のように、”this”と”that”二つの項目に自分の連携したいServiceを当てはめて作られる。また、”this”にはtrigget用のServices、 “that”にはaction用のServicesを指定しなければならない。 
+
+具体例を以下に示す。 
+“this” : Andoroid Photos 
+“that” : Dropbox
+#￼
+￼￼
+
+これによって、Android端末で写真を撮った際に自動的にDropboxにアップロードされるという機能を使用することができる。
+
+また、2015年にMaker channel という新しいServiceが提供された。Maker channelの機能はwebhookが扱えるという点にある。
+
+[3]によると、「webhookとはWebコールバック、HTTPプッシュAPIなどと呼ばれる場合もあり、あるアプリケーションから別のアプリケーションに対してリアルタイムな情報提供を実現するための仕組みである。Webhookは指定されたアプリケーションに対してHTTPリクエスト（通常はPOST）を行い、受信側はその内容をパース（リクエストの内容を解釈）して利用する。」
+
+つまり、Maker channelを使えば、ネットにさえ繋がっていれば自作のデバイスやサーバーと情報の送受信が可能になるということである。Maker channelにも同様、トリガー機能とアクション機能がある。 
+￼
+
+もし、Maker channelのTwitterとRaspberry Pi[https://www.raspberrypi.org/]のAppletを作るとするのならば、トリガー機能はrasberry piに接続したボタンを押す動作をトリガーにして、 Twitterに投稿することが可能になり、 アクション機能はTwitterの自分のツイートに対し返信が来た時にraspberry piのLEDが点灯するといったことが可能になる。
+
+今回の制作では、Maker channelのアクション機能を使った。アクション機能の使うのに設定する項目は以下である。 
+￼
+
+	•	URL … リクエストを送りたいURLを指定する。
+	•	Method … HTTPメソッドを指定する。
+	•	Content Type … コンテンツタイプを指定する。
+	•	Body … 内容をJSONで書く。
+
+JSONとはJavascriptのオブジェクトと呼ばれるブロックを模した記法のテキストフォーマットであり、可読性が高く様々なプログラミング言語で扱われている。
+</Text>
+        </Document>
+        <Document ID="6">
+            <Title>表紙</Title>
+        </Document>
+        <Document ID="31">
+            <Title>参考</Title>
+            <Text>参考
+1. "Amazon Echo" (https://www.amazon.com/Amazon-Echo-Bluetooth-Speaker-with-WiFi-Alexa/dp/B00X4WHP5E) (2016/12/28)
+1. "Google Home" (https://madeby.google.com/home/) (2016/12/28)
+1. "戦国無双 ～真田丸～" (http://www.gamecity.ne.jp/sanadamaru/) (2016/12/29)
+1. "真田丸" (http://www.nhk.or.jp/sanadamaru/) (2016/12/29)
+1. George Chernyshov, Jiajun Chen, Yenchin Lai, Vontin Noriyasu, Kai Kunze (2016) "Ambient Rhythm–Melodic Sonification of Status Information for IoT-enabled Devices" IoT'16
+1. Blase Ury, Melwyn Pak Yong Ho, Stephen Brawner, Jiyun Lee, Sarah Mennickenz, Noah Picard, Diane Schulze, Michael L. Littman (2016) "Trigger-Action Programming in the Wild:An Analysis of 200,000 IFTTT Recipes" CHI 2016
+1. Nick Quinlan "What’s a Webhook?" (http://sendgrid.com/blog/whats-webhook/(2016/12/28)
+1. "JSON" (http://www.json.org/) (2016/12/28)
+1. “Thingiverse” (http://www.thingiverse.com/) (2016/12/29)
+1. “HAPPY JOINT 公式通販サイト【PARTY JOINT 】” (http://www.happyjoint.com/) (2016/12/29)
+1. “Arduino” (https://www.arduino.cc/) (2016/12/29)
+1. “どの無線親機を選べばよいかわかりません/無線親機の利用人数や接続台数の目安について - アンサー詳細 | BUFFALO バッファロー” (http://faq.buffalo.jp/app/answers/detail/a_id/15950/p/0,1,2,8311,8312) (2016/12/30)
+1. 総務省｜平成27年版 情報通信白書｜インターネットの普及状況 (http://www.soumu.go.jp/johotsusintokei/whitepaper/ja/h27/html/nc372110.html) (2016/12/30)
+1. That 'Internet of Things' Thing - Page 1 - RFID Journal (http://www.rfidjournal.com/articles/view?4986) (2016/12/30)
+1. Google Assistant (https://assistant.google.com/) (2016/12/30)
+1. ”スマートIoT照明 - これがPhilips Hueです。” (http://www2.meethue.com/ja-jp/) (2017/1/1)
+1. “WEMO That - Home Automation Made Easy” (http://www.wemo.com/) (2017/1/1)
+1. “Smart Switch | Easwaran@FabAcademy 2016” (http://archive.fabacademy.org/archives/2016/fablabtrivandrum/students/400/project/index.html) (2017/1/1)
+1. “MyxyPod Innovation 2016 - MYXYTY” (http://myxyty.com/myxypod-smart-home-speaker/) (2017/1/1)
+1. “スマートIoT照明 - これがPhilips Hueです。”  (http://www2.meethue.com/ja-jp/) (2017/1/1)
+1. “intel-iot-devkit/mraa: Linux Library for low speed IO Communication in C with bindings for C++, Python, Node.js &amp; Java. Supports generic io platforms, as well as Intel Edison, Intel Joule, Raspberry Pi and many more.” (https://github.com/intel-iot-devkit/mraa) (2017/1/3)
+1. “IRKit - Open Source WiFi Connected Infrared Remote Controller” (http://getirkit.com/) (2017/1/6)</Text>
+        </Document>
+        <Document ID="14">
+            <Title>1-1 背景</Title>
+            <Text>1-1 背景
+近年、オープンソースハードウェアのArduino[]を始めとする比較的簡単なプログラミングで制御できるマイコンボードが登場し、センサーを使ったラピッドプロトタイピングが容易になった。また、総務省の情報通信白書[]によると平成26年の世帯毎の情報端末の普及状況は「携帯電話・PHS」が94.6%でその中でもスマートフォンを所有する人は64.2%、「パソコン」が78.0%となっており、インターネットを利用者の人口普及率は82.8%でほとんどの日本人が、情報端末を持っており、且つインターネットを使用しているというのが分かる。このような背景から近年、IoTという言葉が度々聞かれるようになった。IoTとはもともと1999年に無線タグの標準化団体「Auto-ID」の創設者の一人Kevin AshtonがProcter &amp; Gambleで発表したプレゼンテーションのタイトルで「internet of things」とつけたことから生まれた言葉である。当時はRFIDと実際の商品との関連性をインターネットに例えたのに対し、昨今のIoTという言葉はRFIDタグだけでなく、家電製品や自動車などありとあらゆる”モノ”をインターネットに繋ごうという意味で使われることが多くなった。また、その中でも2016年はIoT元年と呼ばれ、AmazonやGoogleといった世界的企業を始めとする多数の企業がIoTデバイスをリリースした。特にGoogle Home[]はGoogle Assistant[]という人工知能付き音声アシスタントを搭載したおり、Google Homeに話しかけることで音楽を再生したり、youtubeを再生したりすることが可能となっている。また、IoTデバイスはセンサーとRaspberry Piなどの無線に繋がるデバイスがあれば、電子工作の知識がさほどなくても作れるという敷居の低さも持ち併せており、個人制作の範囲で使用する場合ならクラウドサービスの無料枠で足りることが多々あるという点から、Web業界内でも制作しようという動きが見られる。また、IoTデバイスとWebサービスを連携できるIFTTT[]やmyThings[]などのサービスも出てきた。
+IoTでできることは様々で、デバイス自体の機能としては、IoTデバイスに備えられたセンサーからの情報をインターネットを経由してクラウド上に蓄積したり、IoTデバイスとwebサービスを連携させた自動化などが考えられる。だが、”モノ”を何にするかで役割は大きく変わり、それもまた個人のニーズに影響すると言える。
+しかし、そのようなIoTデバイスが一般家庭に普及していくにはいくつかの問題があるように思われる。その理由は主に次の2点である。1点目は、google homeなどのデバイスで他のデバイスを制御する際には、その制御されるデバイス自体もインターネットに接続される必要があるという点である。例えば、google home 経由で部屋の電気を操作したいなら、別途インターネットに接続可能な照明を購入しなければならない。2点目は、wi-fiルーターの接続台数に制限がある点である。一般家庭で用いられる無線LANルーターの接続台数は10台が目安とされ[]、そのためWi-Fi接続方式のIoTデバイスの接続台数が増えるとその分ルーターにも負荷が増え、日常的にPCやスマートフォンを使用するのに支障をきたす恐れがある。</Text>
+        </Document>
+        <Document ID="40">
+            <Title>Smart Swich</Title>
+            <Text>Smart Switch
+Smart SwitchはEaswaranのFabAcademyのFinalプロジェクトとして発表されたアダプタ型のIoTデバイスである。FabAcademyとはNeil Gershenfeld教授を中心に毎年行われている「how to make (almost) anything」を目標にデジタルファブリケーションを始めとしたものづくりに関する様々な知識を毎週課題で実際にものを作りながら身に付けていく講義である。そこでの課題は主に制作過程をドキュメンテーションとしてwebサイト上にアップロードされており、誰でも閲覧が可能となっている。故に、パーツさえ揃えれば同じものを作ることが可能である。Smart SwitchはESP8266というWi-Fiモジュールを搭載している。また制御チップはAtmega 328pというArduinoにも使われているものを使用している。このプロジェクトの良い所はMIT ライセンスで公開されていて、且つ、制作データがそのままダウンロードできる点にある。それは、オープン化することで、自分に合ったIoTデバイスを自作するという手段で家庭に普及していく可能性もあるからである。
+#
+図 Smart Switch</Text>
+        </Document>
+        <Document ID="32">
+            <Title>タイトル</Title>
+            <Text>第１章 序論</Text>
+        </Document>
+        <Document ID="15">
+            <Title>5章 評価</Title>
+        </Document>
+        <Document ID="41">
+            <Title>IoT狼煙の制作</Title>
+        </Document>
+        <Document ID="24">
+            <Title>外装の制作</Title>
+            <Text>4-4 デバイス部分の制作
+#</Text>
+        </Document>
+        <Document ID="33">
+            <Title>wemo</Title>
+            <Text>wemo
+wemoとは家電をスマートフォン等から簡単に制御が可能な電源アダプタのスマートデバイスである。また、電源アダプタの他にwemo familyとして監視カメラ、コーヒーメーカー、LED電球などがある。LED電球はPhilipsのHueと同様、wemo linkという親機と最高で50個まで接続可能なLED電球の間でローカルネットワークが構築されている。一般的にユーザーは専用のアプリを使用して制御するが、Amazon EchoやIFTTTとの連携も可能となっている。wemoでできることは以下の4点である。
+	1.	アプリからのON,OFF制御
+	2.	スケジュールでのON,OFF制御
+	3.	現在の通電状態の確認
+	4.	消費電力の測定、リアルタイム表示
+Wemoを導入するメリットは既存の電化製品をそのままIoT化できるところにある。そのため、ユーザーは少ないコストで家庭内をIoT化することが可能となる。ただし、接続方式はWi-Fiであるため多数の接続はルーターに負荷をかけることが想定される。
+#
+図 ; wemoの使用風景</Text>
+        </Document>
+        <Document ID="16">
+            <Title>6章 今後の展望</Title>
+        </Document>
+        <Document ID="42">
+            <Title>制作物の構成</Title>
+            <Text>制作物の構成</Text>
+        </Document>
+        <Document ID="25">
+            <Title>第3章 制作</Title>
+            <Text>第3章 制作
+この章では、前半で本研究で制作したIEEE802.15.4接続のIoTデバイスの制作方法について述べる。後半でIEEE802.15.4接続のIoTデバイスを用いた例として制作したIoT狼煙の制作方法について述べる。それぞれ制作過程を説明する際に、装置の概要及び、制作に使用した既存のサービス及び技術の説明をし、その後、実際の制作プロセスを説明するという順番で述べていく。</Text>
+        </Document>
+        <Document ID="34">
+            <Title>1-2-2 IoTについての既往研究</Title>
+            <Text>1-2-2 IoTについての既往研究
+AmbientRhythm–Melodic Sonification of Status Information for IoT-enabled Devices
+この研究はIoTデバイスの状態をメロディに混ぜ合わせることで進捗状況を判断できるかどうか検証している研究である。この研究では背景として、IoTデバイスの情報のやり取りを制限するのはCPUの速度やバッテリーといったデバイス側のスペックが原因ではなく、人間の見落としによるものだとして、より注意を引くために、デバイスの稼働状況を継続的に通知するシステムを構築した。作られたシステムはレベル0から5の各プロセスに6つの優先度を持つ5つの異なるプロセスに関する情報をユーザーに提示できる音を発する装置で、30個のループトラックとトラックを5個使ってメロディを構成した。実験にしようしたトラックは3Dプリンター、サンディングマシン、レーザープリンタ、ハンマー、スキャナーの音をそれぞれ録音して用いた。結果的におおむね正しく稼働状況を評価できる段階だった。</Text>
+        </Document>
+        <Document ID="17">
+            <Title>謝辞</Title>
+        </Document>
+        <Document ID="43">
+            <Title>ハードウェアの制作</Title>
+            <Text>ハードウェアの制作
+ハードウェアの制作では、使用した電子基板の設計と制作について述べる。
+電子基板の設計にはEAGLEという回路設計ソフトを用いた。EAGLEは、まずschematicと呼ばれる回路設計をする画面で電子部品を並べて回路図を作成していき、次にboardと呼ばれる実際の電子基板を設計する画面で電子部品同士を重ならないように配置し、線で繋いでいくという手順で基板データを作成していく。
+今回、使用した電子部品及びマイコンは以下である。
+	•	Mini USBコネクタ … 1個
+	•	メスピンヘッダ … 12 x 2個, 14 x 2個, 2 x 2個, 3 x 1個
+	•	Arduino Pro Mini 3.3V 8MHz … 1個
+	•	TWE-LITE DIP … 1個
+
+Mono Wirelessが出してるxbee搭載モジュールtwe-liteを使うことにしました。TWE-LITE DIPには開発時間を短縮するために、
+#
+図 左 : schematicの設計 右 : boardの設計
+￼￼￼</Text>
+        </Document>
+        <Document ID="26">
+            <Title>Untitled</Title>
+        </Document>
+        <Document ID="50">
+            <Title>パーソナルファブリケーション</Title>
+            <Text>2-2 パーソナルファブリケーション
+</Text>
+        </Document>
+        <Document ID="35">
+            <Title>過去の自分の研究</Title>
+            <Text>2-2-3 過去の自分の制作
+私は修士課程の2年間でこれまでに2つの戦国時代に纏わる物をデジタルファブリケーション技術を用いて制作してきた。
+
+真田幸村の十文字槍の制作
+2015年の8月中旬~9月中旬までの一ヶ月間、私はFabLab Sendai FLATでインターンシップに参加した。私は仙台市の青葉城趾を拠点に活動する奥州・仙台おもてなし集団 伊達武将隊(http://www.datebusyou.jp/)の真田幸村と出会った。真田幸村と言えば大坂の陣で活躍した戦国武将で徳川家康に「日本一の兵」と言われた猛将である。朱色の十文字槍を持って戦う姿がゲーム[]やドラマ[]などで描かれている。十文字槍とは槍の穂先が十文字になっている槍のことである。しかし、伊達武将隊の真田幸村は現状、十文字槍を持っていなかった。そこで、私は彼の為に十文字槍を制作し献上した。
+槍を制作するに当たって、3Dプリンターを使うためにまずモデリングから始めた。
+モデリングソフトはAutodesk社のFusion 360を使用した。#
+図1 Fusion 360によるモデリング
+￼
+図2 Fusion 360によるレンダリング
+3Dプリントの出力にはMakerBot社のReplicator 2という3Dプリンターを使った。Replicator 2の仕様上、プリントのサイズは28.5 x 15.3 x 15.5 cmだったが、プリントしたいサイズはおよそ37.8 x 28 x 2.1 cmだったため、5つにパーツを分割して出力した。
+￼
+図3 モデルの分割
+制作過程の詳細は以下にまとめてある。( http://fabble.cc/shinnoske0727/yukimura)
+また、今回制作した槍は主に伊達武将隊の演舞用に用いられる物として制作を依頼されたため、壊れる可能性を危惧した。また、私が基本的には福岡在住で、修理の都度、仙台に赴くのは難しいと思われたため、3Dデータ自体をThingiverse[]に公開することにした。 Thingiverseとはユーザーが自分で作った3Dモデル等をアップロードしたり、別の誰かが作った3Dモデルをダウンロードしたりできるwebサービスである。一般的にアップロードするデータはSTLデータと実際にプリントした画像などである。また、ライセンスはクリエイティブコモンズやBSDライセンスなどを自分で選ぶ。以下に私が公開したデータがある。(http://www.thingiverse.com/thing:1015604) このデータをダウンロードして3Dプリントすれば、世界中で至る所で全く同じものを複製することが可能となる。私はこの制作でオープンデザインの可能性を感じた。
+
+豊臣秀吉の一の谷馬藺兜の制作
+2016年の1月~6月にかけて私はMITメディアラボのニール・ガーシェンフェルド教授による「Fab Academy」という講座を受講した。Fab Academyでは「(ほぼ)なんでも作る方法」というテーマでデジタルファブリケーション機器の使用方法、回路設計、プログラミング、FabLabの運営に至るまで非常に幅広い講義を受けた。受講生はドキュメンテーションと呼ばれる自身の制作体験記を毎週の課題に合わせて更新していく。その主な内容は制作過程、コツ、失敗例などである。また、毎週の課題とは別に最終課題として最終制作物を作らなければならない。その最終制作物として私は豊臣秀吉の兜を制作することにした。兜は頭を守る防具として、古代から近世にかけて利用されていた。だが、群雄割拠の戦国時代に於いては兜は自分の存在を他人に誇示するという目的も持っていた。そのため、戦国時代の兜には変わった形状の物が多く見られる。自分の存在を他人に誇示することは、味方の場合だと士気が上がるが、反対に敵の場合だと、目標にされる。自分の存在を他人に誇示する用途としての兜を私は再発明しようと考えた。人々が目立ちたい場所は人それぞれだと思うが、私が目立ちたいと思った場所はクラブやライブハウスなどである。以前からクラブやライブハウスでの目立つグッズとして、通販サイトでELワイヤーを搭載したサングラスなどが売られている。[] 故に、今回私が制作した兜は、軽くて丈夫なクラブイベント用の兜である。また兜の形状は目立ちたがりで有名な豊臣秀吉が所有していた一の谷馬藺兜をモデルにした。私はその兜を"Kanpaku Party"と名付けた。
+￼
+図1  "Kanpaku Party"のシステム図
+"Kanpaku Party"は自前で作った兜にマイクとLEDの基盤を搭載している。機能としては、拾った音を周波数解析して、周波数スペクトルを7段階に分け、それに応じてLEDが光るといった仕組みになっている。基本的に兜の表面は鉄製で上から漆を塗って仕上げているものが多い。しかし、今回制作した兜は頭を保護するというよりも軽さを大事にしたかったので、綿とエポキシを混ぜ、それを型に被せ、市販の布団袋に入れて掃除機で中の空気を吸引し、真空にして一晩放置するという手順で成型した。型はAutodesk社のFusion 360でモデリングをして、制作した3DデータをAutodesk社の123D Makeでimportした。その後、レーザーカッターで切れるようにデータを層状に分割し、pdf形式でexportした。
+
+￼
+図2 レーザーカッターで成型した型
+￼
+図3 エポキシと綿を混ぜ合わせた混合物を型に被せて真空にする。
+(布団袋と混合物が張り付くのを防ぐためにタオルとビニールを混合物の上に敷いている)
+￼
+図4 成型後
+また、電子回路もマイクと制御基盤以外は自作の基盤を使用した。マイクはAdafruit(https://www.adafruit.com/)のマイクモジュールを使用した。制御基盤はFabKit(http://fabacademy.org/archives/2015/doc/projects/fabkit-0.4.html)というオープンソースのArduino IDE[]でプログラミングができる基盤を使用した。回路図の設計にはEagleというソフトウェアを使った。制作した基盤は大量のLEDを接続するためにターミナルブロックを多数載せた基盤とFabKitの裏側に装着し、電源の供給とマイク,LEDの接続回路を加えた拡張基盤を制作した。
+￼
+図5 左 : FabKit 右 : FabKitの裏の拡張基盤
+￼
+図6 左 : LED用の基盤 右: 接続
+￼
+図7 左 : マイクモジュール 右: 接続
+</Text>
+        </Document>
+        <Document ID="18">
+            <Title>制作物の構成</Title>
+            <Text>4-1 制作物の構成</Text>
+        </Document>
+        <Document ID="44">
+            <Title>外装の制作</Title>
+            <Text>外装の制作
+・基盤のサイズとコンセントのサイズを元に3Dモデリング
+・レーザーカット用のデータを制作
+・塗装
+・組み立て＆完成</Text>
+        </Document>
+        <Document ID="27">
+            <Title>第2章 オープンデザインとパーソナルファブリケーション</Title>
+            <Text>第2章 オープンデザイン</Text>
+        </Document>
+        <Document ID="51">
+            <Title>デジタルファブリケーション</Title>
+        </Document>
+        <Document ID="36">
+            <Title>IoTモジュールの制作</Title>
+            <Text>IoTモジュールの制作</Text>
+        </Document>
+        <Document ID="19">
+            <Title>クライアントの制作</Title>
+            <Text>4-3 クライアント部分の制作</Text>
+        </Document>
+        <Document ID="45">
+            <Title>ソフトウェアの制作</Title>
+            <Text>ソフトウェアの制作
+
+・Arduinoを使った話
+・文字コード変換の話
+・Twe-liteのセットアップ
+・libmraa</Text>
+        </Document>
+        <Document ID="28">
+            <Title>2章 通信の歴史</Title>
+        </Document>
+        <Document ID="52">
+            <Title>第4章 制作物の応用</Title>
+        </Document>
+        <Document ID="37">
+            <Title>Hue</Title>
+            <Text>Philips Hue
+Philips Hueとはインターネットに接続可能なLED照明である。消費電力は9Wだがかなり明るく感じる。その割に電球部分の発熱が少ない。Philips HueはPhilips Hue ランプとPhilips Hue ブリッジで構成されており、ブリッジはWi-Fiでインターネットに繋がっており、ブリッジと各LEDランプの間はZigBeeという近距離無線通信規格で接続されている。結果的に、Wi-Fiを使用するのはブリッジ単体になるため、闇雲にWi-Fiを占有しないという点では非常に優れたIoTデバイスであると言える。アプリで手動で照明の光を調節したりや光の色の変更することが可能で、あらかじめ登録されたムードの色に自動的に聴講することも可能である。また、APIが公開されており、サードパーティ製のアプリも多数存在しIFTTTやブリッジが最新バージョンに限りApple HomeKitとも連携が可能である。LEDランプの他、バッテリー内蔵型LED照明のPhilips Hue Goや、テープLED型のPhilips Hue ライトリボンプラス、リモコンとして使用できるPhilips Hue Tapスイッチなどがある。
+#
+図 Philips Hue ライトと専用アプリのGUI￼
+図 Philips Hueブリッジ</Text>
+        </Document>
+        <Document ID="46">
+            <Title>構成の概要</Title>
+            <Text>構成の概要
+今回制作したデバイスは制御するには親機と子機の二つが必要となる仕様になっているが、本研究においては、子機のみの部分をIoTモジュールとして述べる。その理由は親機となりうるデバイスは多々あるためである。本研究ではIntel Edisonを親機として使用しているが、libmraaというGNU/Linux向けライブラリを用いた開発を行なっているためRaspberry Pi等の開発ボードでも動作が可能である。IoTモジュールはArduino Pro MiniとTwe-Lite DIPで構成されており、IoTモジュール内のコンセントに他の家電を接続することで、ON, OFFの制御が可能となっている。</Text>
+        </Document>
+        <Document ID="29">
+            <Title>第1章 序論</Title>
+        </Document>
+        <Document ID="38">
+            <Title>Google Home</Title>
+            <Text>Google Home
+Google HomeとはGoogle Assistantという人工知能付き音声認識システムを内蔵したスピーカー型のIoTデバイスである。基本的にGoogle Homeは対話によって制御される。また、Google HomeはWi-Fi接続でローカルネットワーク内のAndroid TV や Philips Hueなど複数台のIoTデバイスも制御することができる。また、Google Homeに対応していないテレビやスピーカーもGoogleが販売しているChromecastやChromecast Audioなどを接続することでGoogle Homeで制御が可能となる。
+#</Text>
+        </Document>
+        <Document ID="47">
+            <Title>構成要素の詳細</Title>
+            <Text>構成要素の詳細
+Arduino
+Arduinoとはオープンソースハードウェアのマイコンボードである。Arduinoは一般的に統合開発環境Arduino IDEでプログラミングして動作させる。開発言語はC++をベースにしたArduino言語である。ArduinoはAVRマイコンを中心に設計され、IOポートを備えている。開発環境の整えやすさや容易なプログラミングやProcessingやMaxを始めとする様々なアプリケーションで動かすことができるという点から、メイカーだけでなく多くのアーティストやデザイナーに親しまれている。
+
+TWE-Lite DIP 
+TWE-Lite DIPはIEEE802.15.4
+
+IEEE802.15.4
+
+
+
++ Zigbee
++ Wi-FI
++ bluetooth
++ Twe-lite
++ Arduino
+
+ZigBee
+</Text>
+        </Document>
+        <Document ID="39">
+            <Title>MyxyPod</Title>
+            <Text>MyxyPod
+MyxyPodとはフランスのMYXYTYという会社が開発中のIoTデバイスである。MyxyPodは単体だと360°スピーカーとして使用することが可能である。しかし、専用のモジュールを付け足すことで、機能を追加することができる。現時点で追加が可能なモジュールは以下である。
+	•	カメラ
+	•	ハードディスクドライブ
+	•	照明
+	•	パフューム ディフューザー
+	•	音声認識
+	•	バッテリー
+	•	ラジオ
+#
+図 MyxyPod
+これらのモジュールをスピーカーの上に積み上げる形で機能を拡張していく。この仕組みによって、MyxyPodはモジュール単位で機能をアップデートし続けることが可能となるため、型が古くなったから買い直すといった手間が省けると思われる。</Text>
+        </Document>
+        <Document ID="48">
+            <Title>IRKit</Title>
+            <Text>IRKit
+#
+図 IRKit概要図
+IRKitとは赤外線リモコンデバイスで、家庭のエアコン、テレビ、照明などのリモコンを使う家電をiOSやAndroidを搭載したデバイスで制御することが可能である。制御の際には専用アプリを使用し、まず家電のリモコンからの信号をIRKit側に送信して、どの信号が実際にどの機能を果たすかを学習させる必要がある。その後、アプリ内のボタンを押すとその信号を送ってくれるようになる。
+￼
+図 専用アプリIRKitシンプルリモコンのGUI
+IRKitにはWi-Fi機能が内蔵されており、同じLAN内であればどこでも使用が可能となるので、家中どこでも制御が可能となる。また、外出先からの制御も考慮してインターネット上にあるサーバーのAPIも公開されている。
+また、オープンソースでGithub上に回路図や基板の切削データ、外装の3Dモデルの他,
+開発SDKも公開されているため、RKitを使ったサードパーティ製のアプリを作ることも可能となっている。また基板もArduino互換でマイコン内の使用されていないピンは全て接続可能になっており、新しく温度センサーや光センサーなどを付加することも可能となっており、非常に拡張性の高いデバイスである。
+</Text>
+        </Document>
+        <Document ID="49">
+            <Title>オープンデザイン</Title>
+            <Text>2-1 オープンデザイン
+オープンデザインとはデザインにおけるオープン化を推進する行為やプロジェクトのことであり、「制作者によって、自由な頒布と記録が許可され、さらに改変や派生まで認められたデザインである」と定義されている。ここで言うデザインとは様々で料理のレシピ、衣服、3Dモデルに至るまで有体物における機能や形状、仕組みなどのデザインのことを指す。
+オープンデザインという概念が生まれた背景にはオープンソース化というものがある。
+オープンソース化とはもともとソフトウェアから始まり、オープンソースソフトウェアという概念が提唱された。オープンソースソフトウェアにはOSのLinuxやMozillaが開発しているFirefoxやThunderbird, Webサーバーを構築する際に用いられるApacheやMySQLがある。続いてコンテンツの世界でオープンコンテンツが生まれた。ここでいうコンテンツとは文章・画像・音楽・映像を指す。続いて、オープンソースハードウェアという概念が生まれた。オープンソースハードウェアには、自己複製型の3DプリンターのRepRap[]や開発用マイコンボードのArduino[]やマグネットで電子回路を接続していくlittle Bits[]などがある。それからの第4の流れとして提唱されたのがオープンデザインである。
+オープン化の流れの中で重要視されるのは、世界中のエンジニア、デザイナー、メイカーたちと共創ができるという点である。これにより、企業内での狭いコミュニティで開発していくよりも、開発速度が向上し、新たな発見や、用途を他の第3者が発見してくれる可能性がある。
+オープンデザインはSepehr Kiani、Samir Nayfeh、Ryan Vallanceらが立ち上げたOpen Design Fundationで頒布条件が公開されている。
+オープンデザインの頒布条件1. Free Redistribution (再配布の自由)2. Design Documentation (デザイン・ドキュメンテーション)3. Derived Works (派生物)4. Integrity of the Designer’s Design Documentation (デザイナーのデザイン・ドキュメンテーションの完全性)5. No Discrimination Against Persons or Groups (個人または団体の差別の禁止)6. No Discrimination Against Fields of Endeavor (活動分野に対する差別の禁止)7. Distribution of License (ライセンスの頒布)8. License Must Not Be Specific to a Product (ライセンスは特定の製品に固有のものではならない)9. License Must Not Contaminate Other Designs (ライセンスは他のデザインを汚染してはならない)
+
+これらに準拠して、本研究の制作物は公開することを想定している。</Text>
+        </Document>
+        <Document ID="10">
+            <Title>IoT</Title>
+        </Document>
+        <Document ID="11">
+            <Title>New Folder</Title>
+        </Document>
+        <Document ID="20">
+            <Title>サーバーの制作</Title>
+            <Text>4-2 サーバー部分の制作</Text>
+        </Document>
+    </Documents>
+</SearchIndexes>

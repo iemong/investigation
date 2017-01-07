@@ -16,9 +16,10 @@
       channel: 'ifttt',
       resource: 'action',
     }, function(msg){
-      /* Do something here */
-      /* Will get here every time a new resource data is written or published */
-      console.log(msg);
+      var bbt_MSG = msg;
+      console.log(bbt_MSG);
+      final_msg = msg.data;
+      socket.emit('send_c_to_s',{message:final_msg});
     });
   </script>
 </body>

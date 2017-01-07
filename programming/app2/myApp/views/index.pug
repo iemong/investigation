@@ -8,8 +8,7 @@ block content
   script(src='https://beebotte.com/bbt.js')
   script.
     //variable
-    var bbt_MSG = "";
-    //socket.io function
+      //socket.io function
     var socket = io.connect('http://localhost:3000');
     socket.on('start',function(data){
       console.log(data);
@@ -20,7 +19,7 @@ block content
       channel: 'ifttt',
       resource: 'action',
     }, function(msg){
-      bbt_MSG = msg;
+      var bbt_MSG = msg;
       console.log(bbt_MSG);
       final_msg = msg.data;
       socket.emit('send_c_to_s',{message:final_msg});
