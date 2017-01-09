@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ScrivenerProject Version="1.5" Creator="SCRMAC-2.8.1.2-26324" Device="nakazawa-mirai-no-MacBook-Pro" Modified="2017-01-09 15:20:50 +0900" ModID="C38F32FF-61AE-447D-A72D-94ABB9D60541">
+    <Binder>
+        <BinderItem ID="0" UUID="79A66B9E-983B-4CC3-8160-B64B98682B87" Type="DraftFolder" Created="2016-12-28 11:00:47 +0900" Modified="2016-12-28 11:02:44 +0900">
+            <Title>論文</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <Children>
+                <BinderItem ID="6" UUID="A8B84A70-A9F8-4EC7-8029-40B9F435C1B3" Type="Text" Created="2016-12-28 11:04:08 +0900" Modified="2016-12-28 11:04:19 +0900">
+                    <Title>表紙</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="3" UUID="3799F2F1-9E4A-4F36-AB1C-5C374C285498" Type="Text" Created="2016-12-28 11:00:47 +0900" Modified="2017-01-03 19:08:21 +0900">
+                    <Title>概要</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>3,493</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="5" UUID="2C30D42B-5B11-4DA0-A185-F6789D40D675" Type="Text" Created="2016-12-28 11:02:59 +0900" Modified="2017-01-03 12:05:40 +0900">
+                    <Title>目次</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>16,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="29" UUID="40BA497A-BEB2-4438-B836-1650C2DC7730" Type="Folder" Created="2016-12-28 11:41:03 +0900" Modified="2017-01-08 23:10:18 +0900">
+                    <Title>第1章 序論</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="14" UUID="7E9BD088-E899-43CE-B583-B7BC7DA14DE8" Type="Text" Created="2016-12-28 11:07:18 +0900" Modified="2017-01-08 23:11:03 +0900">
+                            <Title>背景</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,6</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="12" UUID="67067A01-A86C-47AC-A810-C59851DBCD67" Type="Text" Created="2016-12-28 11:06:58 +0900" Modified="2017-01-08 23:08:43 +0900">
+                            <Title>既往研究</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>70,0</TextSelection>
+                            </TextSettings>
+                            <Children>
+                                <BinderItem ID="37" UUID="2C55C60D-9A5D-44B4-8AC3-25FDAB3DCD30" Type="Text" Created="2017-01-01 15:58:17 +0900" Modified="2017-01-03 19:08:21 +0900">
+                                    <Title>Hue</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>524,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="33" UUID="CAC5520E-31F1-4BFC-AD71-C025653E6F73" Type="Text" Created="2016-12-28 18:40:59 +0900" Modified="2017-01-01 21:34:32 +0900">
+                                    <Title>wemo</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>4,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="38" UUID="5DA2C1A6-511B-4566-B567-10642AB423AF" Type="Text" Created="2017-01-01 15:58:23 +0900" Modified="2017-01-03 12:25:47 +0900">
+                                    <Title>Google Home</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>296,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="39" UUID="3E3754E4-D1CE-4489-9274-5EF27E23DF01" Type="Text" Created="2017-01-01 15:58:30 +0900" Modified="2017-01-01 21:16:22 +0900">
+                                    <Title>MyxyPod</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>339,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="40" UUID="1CA52DD3-A333-4E3B-A4DB-7C3213C6C3D4" Type="Text" Created="2017-01-01 16:01:50 +0900" Modified="2017-01-02 00:39:42 +0900">
+                                    <Title>Smart Swich</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>0,12</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="48" UUID="CF907CEC-CBA3-40F7-A4FF-8CF129695534" Type="Text" Created="2017-01-04 13:57:11 +0900" Modified="2017-01-06 10:44:30 +0900">
+                                    <Title>IRKit</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>208,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                        <BinderItem ID="13" UUID="A109529F-0C98-4793-846E-1963C3F9456C" Type="Text" Created="2016-12-28 11:07:07 +0900" Modified="2017-01-07 17:57:32 +0900">
+                            <Title>目的</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>4,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="27" UUID="74F80E84-3943-40FA-9F41-2EF77DF27EFC" Type="Folder" Created="2016-12-28 11:40:08 +0900" Modified="2017-01-08 23:12:17 +0900">
+                    <Title>第2章 オープンデザインとパーソナルファブリケーション</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="49" UUID="E2166E4B-958D-470C-8592-2847EA2FEDB1" Type="Text" Created="2017-01-05 15:21:44 +0900" Modified="2017-01-09 12:22:02 +0900">
+                            <Title>オープンデザイン</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1325,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="50" UUID="C4031D10-4AE8-4ABA-872A-A9E7B94B6C7D" Type="Text" Created="2017-01-05 15:22:19 +0900" Modified="2017-01-09 12:22:32 +0900">
+                            <Title>パーソナルファブリケーション</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,18</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="35" UUID="BC683F4C-9841-44F1-A1C5-FA3DA36833B5" Type="Text" Created="2016-12-28 18:55:11 +0900" Modified="2017-01-08 23:03:25 +0900">
+                            <Title>過去の自分の研究</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="25" UUID="08E4B75B-3162-41DD-89B5-30113259C0E9" Type="Folder" Created="2016-12-28 11:32:51 +0900" Modified="2017-01-09 12:21:46 +0900">
+                    <Title>第3章 制作</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <CorkboardAndOutliner>
+                        <SelectedSubdocumentIDs>18</SelectedSubdocumentIDs>
+                    </CorkboardAndOutliner>
+                    <Children>
+                        <BinderItem ID="46" UUID="D4DC7930-77C0-44FE-ABD5-7548720F35FE" Type="Text" Created="2017-01-03 14:13:43 +0900" Modified="2017-01-09 12:23:24 +0900">
+                            <Title>構成の概要</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,2</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="47" UUID="221CE3AD-39F4-44AD-97EC-0DB45E55A96B" Type="Text" Created="2017-01-03 14:13:50 +0900" Modified="2017-01-09 12:36:16 +0900">
+                            <Title>構成要素の詳細</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1990,0</TextSelection>
+                            </TextSettings>
+                            <CorkboardAndOutliner>
+                                <SelectedSubdocumentIDs>56</SelectedSubdocumentIDs>
+                                <CorkboardSettings>
+                                    <FreeformMode>No</FreeformMode>
+                                    <FreeformCorkboardDocuments>
+                                        <IndexCardBinderID Position="0.193333,0.1" TimeStamp="2017-01-09 11:40:51 +0900">55</IndexCardBinderID>
+                                        <IndexCardBinderID Position="1.12,0.126667" TimeStamp="2017-01-09 11:40:51 +0900">56</IndexCardBinderID>
+                                    </FreeformCorkboardDocuments>
+                                </CorkboardSettings>
+                            </CorkboardAndOutliner>
+                            <Children>
+                                <BinderItem ID="55" UUID="36874AEF-2A55-410B-A1A9-910D77D444FF" Type="Text" Created="2017-01-08 23:42:13 +0900" Modified="2017-01-08 23:42:19 +0900">
+                                    <Title>UARTシリアル通信に特化したアプリです</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>0,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="56" UUID="30E6FE91-B93A-488B-BC8B-3CA2A4F27F17" Type="Text" Created="2017-01-09 11:40:39 +0900" Modified="2017-01-09 11:41:25 +0900">
+                                    <Title>250 kbps、40 kbps、および20 kbpsのデータレート</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>0,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                        <BinderItem ID="45" UUID="C0DA9E60-98A5-4173-A855-0CF92EE996C8" Type="Text" Created="2017-01-03 12:38:55 +0900" Modified="2017-01-09 15:20:50 +0900">
+                            <Title>ソフトウェアの制作</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>78,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="43" UUID="2A99A5E5-41A2-478F-B9F2-9F81B4A0D1BD" Type="Text" Created="2017-01-03 12:36:57 +0900" Modified="2017-01-09 12:06:43 +0900">
+                            <Title>ハードウェアの制作</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>347,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="44" UUID="9B7CB266-AC0F-4410-9D00-D7B2BAE0F23D" Type="Text" Created="2017-01-03 12:37:51 +0900" Modified="2017-01-03 13:56:32 +0900">
+                            <Title>外装の制作</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>63,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="52" UUID="A14E47D3-20CF-4263-940F-A77B6F3B0576" Type="Folder" Created="2017-01-06 23:58:08 +0900" Modified="2017-01-06 23:58:24 +0900">
+                    <Title>第4章 制作物の応用</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="41" UUID="DA59CD1D-78C9-4372-BD5E-8532F6C1E904" Type="Text" Created="2017-01-03 12:34:44 +0900" Modified="2017-01-03 12:34:57 +0900">
+                            <Title>IoT狼煙の制作</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                            <Children>
+                                <BinderItem ID="18" UUID="B76C9DAB-4843-4AB2-A292-5C7A35A06497" Type="Text" Created="2016-12-28 11:11:51 +0900" Modified="2017-01-03 12:33:53 +0900">
+                                    <Title>制作物の構成</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>10,0</TextSelection>
+                                    </TextSettings>
+                                    <Children>
+                                        <BinderItem ID="21" UUID="638B24BB-3BD3-4A4B-A35D-C3339ED73032" Type="Text" Created="2016-12-28 11:13:57 +0900" Modified="2017-01-03 12:35:15 +0900">
+                                            <Title>構成の概要</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <NotesTextSelection>0,0</NotesTextSelection>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <TextSelection>171,0</TextSelection>
+                                            </TextSettings>
+                                        </BinderItem>
+                                        <BinderItem ID="22" UUID="E7A6F86F-A7A5-41D6-96A6-E7126B7D7D6A" Type="Text" Created="2016-12-28 11:14:24 +0900" Modified="2017-01-09 12:20:44 +0900">
+                                            <Title>構成要素の詳細</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <NotesTextSelection>0,0</NotesTextSelection>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <TextSelection>1437,0</TextSelection>
+                                            </TextSettings>
+                                        </BinderItem>
+                                    </Children>
+                                </BinderItem>
+                                <BinderItem ID="20" UUID="41F6E681-99DC-40CE-9044-4C6D8467E800" Type="Text" Created="2016-12-28 11:12:16 +0900" Modified="2017-01-03 12:33:58 +0900">
+                                    <Title>サーバーの制作</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>10,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="19" UUID="74EA9BF6-D050-4EA8-A6BA-88D4A0620CDC" Type="Text" Created="2016-12-28 11:12:12 +0900" Modified="2017-01-03 12:34:03 +0900">
+                                    <Title>クライアントの制作</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>12,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="24" UUID="BCA5416A-45A4-429F-87EA-33AF04B66B44" Type="Text" Created="2016-12-28 11:17:40 +0900" Modified="2017-01-03 12:38:48 +0900">
+                                    <Title>外装の制作</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>10,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="15" UUID="77712D14-57F6-4CB6-9A22-7D96C5927695" Type="Text" Created="2016-12-28 11:10:24 +0900" Modified="2016-12-28 11:10:54 +0900">
+                    <Title>5章 評価</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="16" UUID="828D1FEC-03D3-4C90-B04C-D1DA1AFB2AD2" Type="Text" Created="2016-12-28 11:10:57 +0900" Modified="2016-12-28 11:11:05 +0900">
+                    <Title>6章 今後の展望</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="30" UUID="ACB2510C-55B1-4C61-B45E-62C2869D2DFD" Type="Folder" Created="2016-12-28 14:22:00 +0900" Modified="2016-12-28 14:48:12 +0900">
+                    <Title>参考</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="31" UUID="5BCDBEB5-083B-4153-965B-472F82E16B7C" Type="Text" Created="2016-12-28 14:22:10 +0900" Modified="2017-01-09 11:36:35 +0900">
+                            <Title>参考</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2658,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="17" UUID="E65C02FB-AD10-44D2-A6B4-EED3E263E8E7" Type="Text" Created="2016-12-28 11:11:17 +0900" Modified="2016-12-28 11:11:21 +0900">
+                    <Title>謝辞</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="1" UUID="430BE5C7-4145-4763-925B-5906A1204E53" Type="ResearchFolder" Created="2016-12-28 11:00:47 +0900" Modified="2016-12-28 11:00:47 +0900">
+            <Title>Research</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+        </BinderItem>
+        <BinderItem ID="2" UUID="37F2C9B7-85B1-4EE5-8401-C57108811C55" Type="TrashFolder" Created="2016-12-28 11:00:47 +0900" Modified="2016-12-28 11:00:47 +0900">
+            <Title>Trash</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <Children>
+                <BinderItem ID="11" UUID="7EC98D18-B3A8-4E8A-AC9C-B772D7ED18C2" Type="Folder" Created="2016-12-28 11:06:47 +0900" Modified="2016-12-28 11:06:47 +0900">
+                    <Title>New Folder</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="23" UUID="B7D3F226-C3AD-415E-AEDF-5787FA858FAF" Type="Text" Created="2016-12-28 11:15:02 +0900" Modified="2016-12-28 11:16:58 +0900">
+                    <Title></Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="26" UUID="481E3CE8-FEC9-4C25-9ADE-281E5C034FD4" Type="Text" Created="2016-12-28 11:32:54 +0900" Modified="2016-12-28 11:32:54 +0900">
+                    <Title>Untitled</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="7" UUID="D7F56622-7DB3-4978-A062-61A362B0E258" Type="Text" Created="2016-12-28 11:05:33 +0900" Modified="2016-12-28 11:33:06 +0900">
+                    <Title></Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="9" UUID="E56F5F86-1C33-4F40-B4FC-F2C2C65DA563" Type="Text" Created="2016-12-28 11:06:25 +0900" Modified="2016-12-28 11:40:04 +0900">
+                    <Title></Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="8" UUID="17453724-9870-4156-9140-690A1CD0751B" Type="Text" Created="2016-12-28 11:06:09 +0900" Modified="2016-12-28 11:40:21 +0900">
+                    <Title></Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="10" UUID="189955F1-ADE4-4AD7-A958-6B73255C5E3C" Type="Text" Created="2016-12-28 11:06:35 +0900" Modified="2016-12-28 11:06:37 +0900">
+                            <Title>IoT</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="4" UUID="DF90D7DD-D1D9-4BA4-A3AB-E2DA4F761158" Type="Text" Created="2016-12-28 11:01:29 +0900" Modified="2016-12-28 11:41:03 +0900">
+                    <Title></Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="28" UUID="324BF0FF-EB72-4A98-B4B6-A03CC81C6EA9" Type="Folder" Created="2016-12-28 11:40:57 +0900" Modified="2016-12-28 11:40:59 +0900">
+                    <Title>2章 通信の歴史</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="34" UUID="742C4BDA-B2AC-4C49-8043-96F578A2CED9" Type="Text" Created="2016-12-28 18:54:20 +0900" Modified="2016-12-29 22:13:47 +0900">
+                    <Title>1-2-2 IoTについての既往研究</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>472,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="51" UUID="57E9D9C9-47ED-4E06-BD28-A9B33D95742E" Type="Text" Created="2017-01-05 15:25:04 +0900" Modified="2017-01-05 15:25:10 +0900">
+                    <Title>デジタルファブリケーション</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="53" UUID="A135B19A-DD54-468B-B55C-18B472F91623" Type="Text" Created="2017-01-07 00:01:10 +0900" Modified="2017-01-07 00:01:10 +0900">
+                    <Title>Untitled</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="32" UUID="7D6441AF-9689-482B-B304-2F38A1693F71" Type="Text" Created="2016-12-28 15:16:17 +0900" Modified="2017-01-08 23:09:12 +0900">
+                    <Title>タイトル</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="42" UUID="3244135B-4ACC-4B0B-96B2-6BB26CE57FFF" Type="Text" Created="2017-01-03 12:36:23 +0900" Modified="2017-01-03 12:53:28 +0900">
+                    <Title>制作物の構成</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>6,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="54" UUID="AA9509CA-C3C0-4456-8F6A-C2EA95863D25" Type="Text" Created="2017-01-08 23:29:16 +0900" Modified="2017-01-08 23:29:16 +0900">
+                    <Title>Untitled</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="36" UUID="2F7AE53C-2689-44A8-B1E5-A41E0820D221" Type="Text" Created="2017-01-01 15:43:32 +0900" Modified="2017-01-03 12:53:14 +0900">
+                    <Title>IoTモジュールの制作</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>11,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+    </Binder>
+    <Collections>
+        <Collection Type="Binder" ID="BFA9080E-025E-44F9-B51A-7F226DDBA705" Color="0.962266 0.962266 0.962266">
+            <Title>Binder</Title>
+        </Collection>
+        <Collection Type="RecentSearch" ID="C6562403-3A11-4FC6-B1F4-1E90970AFDDC" Color="0.922 0.91 0.98">
+            <Title>Search Results</Title>
+        </Collection>
+    </Collections>
+    <LabelSettings>
+        <Title>Label</Title>
+        <DefaultLabelID>-1</DefaultLabelID>
+        <Labels>
+            <Label ID="-1">No Label</Label>
+            <Label ID="0" Color="0.9 0.92 0.95">Concept</Label>
+            <Label ID="1" Color="0.985 0.875 0.85">Chapter</Label>
+        </Labels>
+    </LabelSettings>
+    <StatusSettings>
+        <Title>Status</Title>
+        <DefaultStatusID>-1</DefaultStatusID>
+        <StatusItems>
+            <Status ID="-1">No Status</Status>
+            <Status ID="0">To Do</Status>
+            <Status ID="1">First Draft</Status>
+            <Status ID="2">Revised Draft</Status>
+            <Status ID="3">Final Draft</Status>
+            <Status ID="4">Done</Status>
+        </StatusItems>
+    </StatusSettings>
+    <ProjectTargets Notify="No">
+        <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2016-12-28 11:00:46 +0900" IgnoreDeadline="Yes">0</DraftTarget>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
+        <PreviousSession Words="877" Characters="2192" Date="2017-01-09 11:12:27 +0900"></PreviousSession>
+    </ProjectTargets>
+    <PrintSettings PaperSize="595.200012,841.799988" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScrivenerProject>

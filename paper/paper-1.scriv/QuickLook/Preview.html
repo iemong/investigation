@@ -1,0 +1,312 @@
+<html>
+
+<head>
+<title>paper-1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+	body {background-color: #bac0c7}
+    p.binderItem {margin: 10.0px 0.0px 0.0px 05.0px; font-family:Cochin, Times, Courier, Arial, serif; font-size:14.0px;}
+    .page {border: 1px solid #727272; background: #fff}
+    hr {
+      border-top: 1px dashed #000;
+      border-bottom: 0px solid #fff;
+      color: #fff;
+      background-color: #fff;
+      height: 0px;
+  </style>
+</head>
+
+<body>
+
+<table border="0" width="100%" cellspacing="3">
+<tr>
+<td>
+
+<table class="page" width="100%" cellspacing="10" cellpadding="2">
+<tr>
+<td valign="top">
+
+<ul>
+<li>
+<p class="binderItem"><strong>表紙</strong></p>
+</li>
+<li>
+<p class="binderItem"><strong>概要</strong><br/>概要<br/>
+近年、オープンソースハードウェアのArduinoを始めとするプログラマブルなマイコンボードの登場や、インターネット環境の普及やスマートフォンの所持率の向上により、IoT市場は過去にない盛り上がりを見せ、今年に入ってgoogle homeやamazon echoを始めとする多くのIoTデバイスが登場した。しかし、現状の段階では家庭に普及するのは難しいと思われる。その理由は主に次の2点である。1点目は、google homeなどのデバイスで他のデバイスを制御する際には、その制御されるデバイス自体もインターネットに接続される必要があるという点である。例えば、google home 経由で音楽を他のスピーカーで再生したいなら、別途インターネットに接続可能なスピーカーを購入しなければならない。2点目は、wi-fiルーターの接続台数に制限がある点である。一般家庭で用いられる無線LANルーターの接続台数は10台が目安とされ[]、そのためWi-Fi接続方式のIoTデバイスの接続台数が増えるとその分ルーターにも負荷が増え、日常的にPCやスマートフォンを使用するのに支障をきたす恐れがある。<br/>
+よって本...</p>
+</li>
+<li>
+<p class="binderItem"><strong>目次</strong><br/>第1章 序論<br/>
+2.<br/>
+3.<br/>
+4.</p>
+</li>
+<li>
+<p class="binderItem"><strong>第1章 序論</strong><br/>第１章 序論</p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>背景</strong><br/>1-1 背景<br/>
+近年、オープンソースハードウェアのArduino[]を始めとする比較的簡単なプログラミングで制御できるマイコンボードが登場し、センサーを使ったラピッドプロトタイピングが容易になった。また、総務省の情報通信白書[]によると平成26年の世帯毎の情報端末の普及状況は「携帯電話・PHS」が94.6%でその中でもスマートフォンを所有する人は64.2%、「パソコン」が78.0%となっており、インターネットを利用者の人口普及率は82.8%でほとんどの日本人が、情報端末を持っており、且つインターネットを使用しているというのが分かる。このような背景から近年、IoTという言葉が度々聞かれるようになった。IoTとはもともと1999年に無線タグの標準化団体「Auto-ID」の創設者の一人Kevin AshtonがProcter & Gambleで発表したプレゼンテーションのタイトルで「internet of things」とつけたことから生まれた言葉である。当時はRFIDと実際の商品との関連性をインターネットに例えたのに対し、昨今のIoTという言葉はRFIDタグだけでなく、家電製品や自動車などあ...</p>
+</li>
+<li>
+<p class="binderItem"><strong>既往研究</strong><br/>1-2 既往研究<br/>
+上記の背景を鑑みて、既往研究として、家庭内で複数台のIoTデバイスの接続を想定するであろう製品及びプロジェクトを調査した。</p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Hue</strong><br/>Philips Hue<br/>
+Philips Hueとはインターネットに接続可能なLED照明である。消費電力は9Wだがかなり明るく感じる。その割に電球部分の発熱が少ない。Philips HueはPhilips Hue ランプとPhilips Hue ブリッジで構成されており、ブリッジはWi-Fiでインターネットに繋がっており、ブリッジと各LEDランプの間はZigBeeという近距離無線通信規格で接続されている。結果的に、Wi-Fiを使用するのはブリッジ単体になるため、闇雲にWi-Fiを占有しないという点では非常に優れたIoTデバイスであると言える。アプリで手動で照明の光を調節したりや光の色の変更することが可能で、あらかじめ登録されたムードの色に自動的に聴講することも可能である。また、APIが公開されており、サードパーティ製のアプリも多数存在しIFTTTやブリッジが最新バージョンに限りApple HomeKitとも連携が可能である。LEDランプの他、バッテリー内蔵型LED照明のPhilips Hue Goや、テープLED型のPhilips Hue ライトリボンプラス、リモコンとして使用できるPh...</p>
+</li>
+<li>
+<p class="binderItem"><strong>wemo</strong><br/>wemo<br/>
+wemoとは家電をスマートフォン等から簡単に制御が可能な電源アダプタのスマートデバイスである。また、電源アダプタの他にwemo familyとして監視カメラ、コーヒーメーカー、LED電球などがある。LED電球はPhilipsのHueと同様、wemo linkという親機と最高で50個まで接続可能なLED電球の間でローカルネットワークが構築されている。一般的にユーザーは専用のアプリを使用して制御するが、Amazon EchoやIFTTTとの連携も可能となっている。wemoでできることは以下の4点である。<br/>
+ 1. アプリからのON,OFF制御<br/>
+ 2. スケジュールでのON,OFF制御<br/>
+ 3. 現在の通電状態の確認<br/>
+ 4. 消費電力の測定、リアルタイム表示<br/>
+Wemoを導入するメリットは既存の電化製品をそのままIoT化できるところにある。そのため、ユーザーは少ないコストで家庭内をIoT化することが可能となる。ただし、接続方式はWi-Fiであるため多数の接続はルーターに負荷をかけることが想定される。<br/>
+<br/>
+図 ; wemoの使用風景</p>
+</li>
+<li>
+<p class="binderItem"><strong>Google Home</strong><br/>Google Home<br/>
+Google HomeとはGoogle Assistantという人工知能付き音声認識システムを内蔵したスピーカー型のIoTデバイスである。基本的にGoogle Homeは対話によって制御される。また、Google HomeはWi-Fi接続でローカルネットワーク内のAndroid TV や Philips Hueなど複数台のIoTデバイスも制御することができる。また、Google Homeに対応していないテレビやスピーカーもGoogleが販売しているChromecastやChromecast Audioなどを接続することでGoogle Homeで制御が可能となる。</p>
+</li>
+<li>
+<p class="binderItem"><strong>MyxyPod</strong><br/>MyxyPod<br/>
+MyxyPodとはフランスのMYXYTYという会社が開発中のIoTデバイスである。MyxyPodは単体だと360°スピーカーとして使用することが可能である。しかし、専用のモジュールを付け足すことで、機能を追加することができる。現時点で追加が可能なモジュールは以下である。<br/>
+ • カメラ<br/>
+ • ハードディスクドライブ<br/>
+ • 照明<br/>
+ • パフューム ディフューザー<br/>
+ • 音声認識<br/>
+ • バッテリー<br/>
+ • ラジオ<br/>
+<br/>
+図 MyxyPod<br/>
+これらのモジュールをスピーカーの上に積み上げる形で機能を拡張していく。この仕組みによって、MyxyPodはモジュール単位で機能をアップデートし続けることが可能となるため、型が古くなったから買い直すといった手間が省けると思われる。</p>
+</li>
+<li>
+<p class="binderItem"><strong>Smart Swich</strong><br/>Smart Switch<br/>
+Smart SwitchはEaswaranのFabAcademyのFinalプロジェクトとして発表されたアダプタ型のIoTデバイスである。FabAcademyとはNeil Gershenfeld教授を中心に毎年行われている「how to make (almost) anything」を目標にデジタルファブリケーションを始めとしたものづくりに関する様々な知識を毎週課題で実際にものを作りながら身に付けていく講義である。そこでの課題は主に制作過程をドキュメンテーションとしてwebサイト上にアップロードされており、誰でも閲覧が可能となっている。故に、パーツさえ揃えれば同じものを作ることが可能である。Smart SwitchはESP8266というWi-Fiモジュールを搭載している。また制御チップはAtmega 328pというArduinoにも使われているものを使用している。このプロジェクトの良い所はMIT ライセンスで公開されていて、且つ、制作データがそのままダウンロードできる点にある。それは、オープン化することで、自分に合ったIoTデバイスを自作するという手段で家庭に...</p>
+</li>
+<li>
+<p class="binderItem"><strong>IRKit</strong><br/>IRKit<br/>
+<br/>
+図 IRKit概要図<br/>
+IRKitとは赤外線リモコンデバイスで、家庭のエアコン、テレビ、照明などのリモコンを使う家電をiOSやAndroidを搭載したデバイスで制御することが可能である。制御の際には専用アプリを使用し、まず家電のリモコンからの信号をIRKit側に送信して、どの信号が実際にどの機能を果たすかを学習させる必要がある。その後、アプリ内のボタンを押すとその信号を送ってくれるようになる。<br/>
+<br/>
+図 専用アプリIRKitシンプルリモコンのGUI<br/>
+IRKitにはWi-Fi機能が内蔵されており、同じLAN内であればどこでも使用が可能となるので、家中どこでも制御が可能となる。また、外出先からの制御も考慮してインターネット上にあるサーバーのAPIも公開されている。<br/>
+また、オープンソースでGithub上に回路図や基板の切削データ、外装の3Dモデルの他,<br/>
+開発SDKも公開されているため、RKitを使ったサードパーティ製のアプリを作ることも可能となっている。また基板もArduino互換でマイコン内の使用されていないピンは全て接続可能になっており、新しく温度センサーや光センサーなどを付加す...</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>目的</strong><br/>1-3 目的<br/>
+本章2節で取り上げたIoTデバイスでは<br/>
++ Wifi接続が多い<br/>
++  IoTデバイスのほとんどがWi-Fiで接続される(基本的に単体での使用を考えているため)<br/>
++ 規格が統一されていないから<br/>
++オープンソースにした方がいい気がする / <br/>
++ 個人のニーズの多様化 → カスタマイズ性オープンデザインとパーソナルファブリケーション<br/>
++ IoTデバイスを統括するハブとなすデバイス<br/>
++  HueやwemoのLED照明システムなど以外はwi-fi接続<br/>
++ <br/>
+<br/>
+これらのことを踏まえ、本研究ではIoTデバイスの制作を行う。</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>第2章 オープンデザインとパーソナルファブリケーション</strong><br/>第2章 オープンデザイン<br/>
+この章では、私が1章3節で取り上げたオープンデザインとパーソナルファブリケーションについて詳しく述べていく。また、パーソナルファブリケーションの可能性を示すために、過去に自身が取り組んだプロジェクトについても3節でとりあげる。</p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>オープンデザイン</strong><br/>2-1 オープンデザイン<br/>
+オープンデザインとはデザインにおけるオープン化を推進する行為やプロジェクトのことであり、「制作者によって、自由な頒布と記録が許可され、さらに改変や派生まで認められたデザインである」と定義されている。ここで言うデザインとは様々で料理のレシピ、衣服、3Dモデルに至るまで有体物における機能や形状、仕組みなどのデザインのことを指す。<br/>
+オープンデザインという概念が生まれた背景にはオープンソース化というものがある。<br/>
+オープンソース化とはもともとソフトウェアから始まり、オープンソースソフトウェアという概念が提唱された。オープンソースソフトウェアにはOSのLinuxやMozillaが開発しているFirefoxやThunderbird, Webサーバーを構築する際に用いられるApacheやMySQLがある。続いてコンテンツの世界でオープンコンテンツが生まれた。ここでいうコンテンツとは文章・画像・音楽・映像を指す。続いて、オープンソースハードウェアという概念が生まれた。オープンソースハードウェアには、自己複製型の3DプリンターのRepRap[]や開発用マイコンボードのArduin...</p>
+</li>
+<li>
+<p class="binderItem"><strong>パーソナルファブリケーション</strong><br/>2-2 パーソナルファブリケーション<br/>
+前節で述べたオープンデザインを取り入れてる、ものづくりのための「知識を交換・共有する場」としてThingiverse[]やInstractables[]などがあげられる。<br/>
+<br/>
+図 Thingiverse<br/>
+まず、Thingiverseとは主に3Dモデルの共有サイトで、アカウントを作れば誰でも自分の作った3DモデルをWeb上に公開することができるサービスである。そこに上げられている3Dデータの多くは、STLデータである。STLデータは三次元形状を小さな三角形の集合体として表現するシステムで、オブジェクトの形状は、3つの頂点座標及び法線ベクトルで定義される三角形ポリゴンの集合で表現される。STLデータには色情報などは含まれない。多くの3Dプリンターで出力する際に用いられている3Dモデルの中では最も一般的な拡張子である。また、Thingiverseに公開する際にはライセンスを自分で設定する必要がある。公開されているモデルの大半がクリエイティブ・コモンズ・ライセンスである。<br/>
+クリエイティブ・コモンズ・ライセンスとはcreative commons JAPANで...</p>
+</li>
+<li>
+<p class="binderItem"><strong>過去の自分の研究</strong><br/>2-3 過去の自分の制作<br/>
+私は修士課程の2年間でこれまでに2つの戦国時代に纏わる物をデジタルファブリケーション技術を用いて制作してきた。<br/>
+<br/>
+真田幸村の十文字槍の制作<br/>
+2015年の8月中旬~9月中旬までの一ヶ月間、私はFabLab Sendai FLATでインターンシップに参加した。私は仙台市の青葉城趾を拠点に活動する奥州・仙台おもてなし集団 伊達武将隊(http://www.datebusyou.jp/)の真田幸村と出会った。真田幸村と言えば大坂の陣で活躍した戦国武将で徳川家康に「日本一の兵」と言われた猛将である。朱色の十文字槍を持って戦う姿がゲーム[]やドラマ[]などで描かれている。十文字槍とは槍の穂先が十文字になっている槍のことである。しかし、伊達武将隊の真田幸村は現状、十文字槍を持っていなかった。そこで、私は彼の為に十文字槍を制作し献上した。<br/>
+槍を制作するに当たって、3Dプリンターを使うためにまずモデリングから始めた。<br/>
+モデリングソフトはAutodesk社のFusion 360を使用した。<br/>
+図1 Fusion 360によるモデリング<br/>
+<br/>
+図2 Fusion 360によるレンダリング...</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>第3章 制作</strong><br/>第3章 制作<br/>
+この章では、前半で本研究で制作したIEEE802.15.4接続のIoTモジュールの制作方法について述べる。制作方法を説明する際に、装置の概要及び、制作に使用した既存のサービス及び技術の説明をし、その後、実際の制作過程を説明するという順番で述べていく。</p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>構成の概要</strong><br/>概要<br/>
+今回制作したデバイスは制御するには親機と子機の二つが必要となる仕様になっているが、本研究においては、親機はソフトウェア及びハードウェアについて説明し、子機は外装、ソフトウェア、ハードウェアについて説明する。その理由は親機となりうるデバイスは多々あるため一概に形状を固定するのは望ましくないと判断したためである。本研究ではIntel Edisonを親機として使用しているが、libmraaというGNU/Linux向けライブラリを用いた開発を行なっているためRaspberry Pi等の開発ボードでも動作が可能である。子機のIoTモジュールはArduino Pro MiniとTwe-Lite DIPで構成されており、IoTモジュール内のコンセントに他の家電を接続することで、ON, OFFの制御が可能となっている。親機のIoTハブはIntel EdisonとTWE-Lite DIPで構成されている。またIntel Edisonにはsparkfunの拡張ボードを使用した。</p>
+</li>
+<li>
+<p class="binderItem"><strong>構成要素の詳細</strong><br/>デバイスを構成する要素及び技術について<br/>
+Arduino<br/>
+Arduinoとはオープンソースハードウェアのマイコンボードである。Arduinoは一般的に統合開発環境Arduino IDEでプログラミングして動作させる。開発言語はC++をベースにしたArduino言語である。ArduinoはAVRマイコンを中心に設計され、IOポートを備えている。開発環境の整えやすさや容易なプログラミングやProcessingやMaxを始めとする様々なアプリケーションで動かすことができるという点から、メイカーだけでなく多くのアーティストやデザイナーに親しまれている他、ハッカソンなどでプロトタイプを作る際に用いられる。<br/>
+<br/>
+TWE-Lite DIP <br/>
+TWE-Lite DIPはIEEE802.15.4という無線通信規格を搭載したマイコンであるTWE-Liteをブレッドボードに指せるように拡張したものである。Wi-FiなどのIEEE802.11とは異なり、短距離で親機、子機、中継機で構成されたネットワークを生成する。通信には2.4GHz帯を使用する。また、予め用意されたアプリ(TWE-APPS)が用途に応じて6つ用...</p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>UARTシリアル通信に特化したアプリです</strong><br/>UARTシリアル通信に特化したアプリです。<br/>
+<br/>
+「超簡単！TWEアプリ」のシリアル通信機能よりも高度で多彩な機能を実装しています。<br/>
+<br/>
+透過的なデータ通信とコマンドベースのデータ通信の両方に対応しています。<br/>
+<br/>
+パソコンやマイコンにUARTシリアル接続をしてシリアル通信によりTWEシリーズを制御する場合に最適で</p>
+</li>
+<li>
+<p class="binderItem"><strong>250 kbps、40 kbps、および20 kbpsのデータレート</strong><br/>250 kbps、40 kbps、および20 kbpsのデータレート。<br/>
+2つのアドレッシングモード。16ビットのショートアドレスと64ビットのIEEEアドレッシング。<br/>
+ジョイスティックなどのクリティカルレイテンシデバイスのサポート<br/>
+CSMA-CAチャネルアクセス。<br/>
+コーディネーターによる自動ネットワーク確立<br/>
+転送信頼性のために完全にハンドシェークされたプロトコル。<br/>
+低消費電力を確保するための電源管理。<br/>
+2.4GHz ISM帯域で16チャネル、915MHz Iで10チャネル、868MHz帯域で1チャネル</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>ソフトウェアの制作</strong><br/>ソフトウェアの制作<br/>
+Intel Edison <-> TWE-Lite DIP(親機)<br/>
+Intel EdisonはC、C++、Python、Node.jsなどで開発することが可能である。今回は、Intel EdisonをTWE-Lite DIP(親機)間のプログラムはサーバーサイドJavaScript環境のNode.jsで記述した。Intel EdisonとTWE-Lite DIPはUART通信で通信させる。プログラムの構成としては、Intel EdisonはWi-Fiに接続されており、スマートフォンなどの他の端末と通信する入り口としての機能を果たしている。Intel Edisonに送られた情報をASCIIコードに変換してTWE-Lite DIPに送っている。加えて、TWE-Lite DIPとシリアル通信するためには、コマンド表現という指定された形式に変換する必要がある。コマンド表現は最初の1バイトでヘッダーデータである”：”を指定し、次の1バイトで通信したいTWE-Liteを搭載したマイコンの論理IDを指定し、次の1バイトで0x80未満の任意の値を指定し、その後に送信したいデータをバ...</p>
+</li>
+<li>
+<p class="binderItem"><strong>ハードウェアの制作</strong><br/>ハードウェアの制作<br/>
+ハードウェアの制作では、使用した電子基板の設計と制作について述べる。<br/>
+電子基板の設計にはEAGLEという回路設計ソフトを用いた。EAGLEは、まずschematicと呼ばれる回路設計をする画面で電子部品を並べて回路図を作成していき、次にboardと呼ばれる実際の電子基板を設計する画面で電子部品同士を重ならないように配置し、線で繋いでいくという手順で基板データを作成していく。<br/>
+今回、使用した電子部品及びマイコンは以下である。<br/>
+ • Mini USBコネクタ … 1個<br/>
+ • メスピンヘッダ … 12 x 2個, 14 x 2個, 2 x 2個, 3 x 1個<br/>
+ • Arduino Pro Mini 3.3V 8MHz … 1個<br/>
+ • TWE-LITE DIP … 1個<br/>
+<br/>
+<br/>
+図 左 : schematicの設計 右 : boardの設計</p>
+</li>
+<li>
+<p class="binderItem"><strong>外装の制作</strong><br/>外装の制作<br/>
+・基盤のサイズとコンセントのサイズを元に3Dモデリング<br/>
+・レーザーカット用のデータを制作<br/>
+・塗装<br/>
+・組み立て＆完成</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>第4章 制作物の応用</strong></p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>IoT狼煙の制作</strong></p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>制作物の構成</strong><br/>4-1 制作物の構成</p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>構成の概要</strong><br/>4-1-1 構成の概要<br/>
+<br/>
+図1 制作システム<br/>
+<br/>
+今回制作したシステムは、IFTTTというwebサービスやデバイスを連携させることができるサービスを使って、beebotteというクラウドサービスを経由して、intel Edisonに信号を送り、その信号に応じて近距離無線モジュールとArduinoを使って各水蒸気ユニットを動かすものである。</p>
+</li>
+<li>
+<p class="binderItem"><strong>構成要素の詳細</strong><br/>4-1-2 構成要素の詳細<br/>
+IFTTT <br/>
+IFTTTとはServices同士を連携することでAppletsを作るwebサービスである。連携する際は、triggerとactionにそれぞれ1つずつServicesを設定する。 <br/>
+ • Service … Twitter, facebook, Dropboxといったwebサービスや、スマートフォン、FitbitやAndroid Wearなどのウェアラブルデバイスなどを指す。trigger用のServicesは177、action用のServicesは143ある。[2]<br/>
+ • Applet … Appletとは片方のServiceが実行された時に、他のServiceが実行される仕組みを一つにまとめたものである。Appletは下の図のように、”this”と”that”二つの項目に自分の連携したいServiceを当てはめて作られる。また、”this”にはtrigget用のServices、 “that”にはaction用のServicesを指定しなければならない。 <br/>
+<br/>
+具体例を以下に示す。 <br/>
+“this” : Andoroid Photos <br/>
+“...</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>サーバーの制作</strong><br/>4-2 サーバー部分の制作</p>
+</li>
+<li>
+<p class="binderItem"><strong>クライアントの制作</strong><br/>4-3 クライアント部分の制作</p>
+</li>
+<li>
+<p class="binderItem"><strong>外装の制作</strong><br/>4-4 デバイス部分の制作</p>
+</li>
+</ul>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>5章 評価</strong></p>
+</li>
+<li>
+<p class="binderItem"><strong>6章 今後の展望</strong></p>
+</li>
+<li>
+<p class="binderItem"><strong>参考</strong></p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>参考</strong><br/>参考<br/>
+1. "Amazon Echo" (https://www.amazon.com/Amazon-Echo-Bluetooth-Speaker-with-WiFi-Alexa/dp/B00X4WHP5E) (2016/12/28)<br/>
+1. "Google Home" (https://madeby.google.com/home/) (2016/12/28)<br/>
+1. "戦国無双 ～真田丸～" (http://www.gamecity.ne.jp/sanadamaru/) (2016/12/29)<br/>
+1. "真田丸" (http://www.nhk.or.jp/sanadamaru/) (2016/12/29)<br/>
+1. George Chernyshov, Jiajun Chen, Yenchin Lai, Vontin Noriyasu, Kai Kunze (2016) "Ambient Rhythm–Melodic Sonification of Status Information for IoT-enabled Devices" IoT'16<br/>
+1. Blase Ury, Melwy...</p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>謝辞</strong></p>
+</li>
+</ul>
+
+</td>
+<td width="8">
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>
